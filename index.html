@@ -16,7 +16,12 @@
     body {
       font-family: 'Roboto Mono', monospace;
       overscroll-behavior: none;
-      background: #000;
+
+      /* Smooth, static background (no GIF) */
+      background:
+        radial-gradient(1200px 800px at 20% 10%, #141414 0%, #000 55%),
+        radial-gradient(900px 700px at 85% 35%, #0b0b0b 0%, #000 60%),
+        #000;
     }
 
     /* Fast "glass" look without backdrop-filter */
@@ -32,20 +37,10 @@
       contain: layout paint style;
       contain-intrinsic-size: 700px;
     }
-
-    /* Keep background on its own compositor layer */
-    .bg-gpu {
-      transform: translateZ(0);
-      will-change: transform;
-    }
   </style>
 </head>
 
 <body class="min-h-screen h-full bg-black">
-
-  <!-- SINGLE BACKGROUND LAYER (GIF) -->
-  <div class="fixed inset-0 -z-10 bg-center bg-no-repeat bg-cover bg-gpu"
-       style="background-image: url('pixels.gif'); background-color: #000;"></div>
 
   <!-- MAIN CONTENT WRAPPER WITH PADDING -->
   <div class="p-10">
