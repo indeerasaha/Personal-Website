@@ -15,11 +15,11 @@
   <style>
     body {
       font-family: 'Roboto Mono', monospace;
-      overscroll-behavior: none; /* Prevents white “bounce” edges */
+      overscroll-behavior: none;
       background: #000;
     }
 
-    /* Fast "glass" look without backdrop-filter (backdrop-blur) */
+    /* Fast "glass" look without backdrop-filter */
     .glass {
       background: rgba(255, 255, 255, 0.65);
       border: 1px solid rgba(255, 255, 255, 0.18);
@@ -32,10 +32,20 @@
       contain: layout paint style;
       contain-intrinsic-size: 700px;
     }
+
+    /* Keep background on its own compositor layer */
+    .bg-gpu {
+      transform: translateZ(0);
+      will-change: transform;
+    }
   </style>
 </head>
 
 <body class="min-h-screen h-full bg-black">
+
+  <!-- SINGLE BACKGROUND LAYER (GIF) -->
+  <div class="fixed inset-0 -z-10 bg-center bg-no-repeat bg-cover bg-gpu"
+       style="background-image: url('pixels.gif'); background-color: #000;"></div>
 
   <!-- MAIN CONTENT WRAPPER WITH PADDING -->
   <div class="p-10">
