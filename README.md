@@ -2,6 +2,9 @@
 
 https://indeera.vercel.app/
 
+Hosted through vercel with tailwind framework 
 
-Hosted through vercel, uses tailwind frontend 
+Background video (royalty-free) from pexels.com
+
+
 
