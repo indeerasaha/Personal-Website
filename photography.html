@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Indeera Saha — Photography</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Roboto Mono", monospace;
+        overscroll-behavior: none;
+        background: #000;
+      }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.65);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+      }
+
+      .glass-strong {
+        background: rgba(255, 255, 255, 0.65);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
+      }
+
+      .bg-gpu {
+        transform: translateZ(0);
+        will-change: transform;
+      }
+
+      /* Lightweight hover without heavy filters/backdrop */
+      .photo-tile {
+        transition: transform 160ms ease, box-shadow 160ms ease;
+      }
+      .photo-tile:hover {
+        transform: translateY(-5px);
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen h-full bg-black">
+    <!-- BACKGROUND VIDEO -->
+    <video
+      class="fixed inset-0 -z-10 h-full w-full object-cover bg-gpu"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+    >
+      <source src="big.mp4" type="video/mp4" />
+    </video>
+
+    <!-- Dark overlay for legibility -->
+    <div class="fixed inset-0 -z-10 bg-black/30"></div>
+
+    <!-- STICKY NAVBAR -->
+    <nav class="sticky top-0 z-50 bg-transparent">
+      <div class="max-w-6xl mx-auto px-6 pt-4">
+        <div
+          class="rounded-2xl px-6 py-3 bg-white/35 border border-white/20 shadow-lg backdrop-blur-md"
+        >
+          <div class="flex items-center justify-between">
+            <a href="index.html" class="text-black font-semibold tracking-wide">
+              Indeera Saha
+            </a>
+
+            <div class="flex items-center gap-6 text-black">
+              <a
+                href="index.html"
+                class="hover:text-blue-700 hover:underline underline-offset-4 transition"
+              >
+                Home
+              </a>
+              <a
+                href="resume.html"
+                class="hover:text-blue-700 hover:underline underline-offset-4 transition"
+              >
+                Resume
+              </a>
+              <a
+                href="photography.html"
+                aria-current="page"
+                class="font-semibold underline underline-offset-4"
+              >
+                Photography
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- PAGE CONTENT -->
+    <main class="max-w-6xl mx-auto px-6 pt-4 pb-8">
+      <section class="glass-strong rounded-2xl p-6 md:p-8">
+        <div class="flex items-start justify-between gap-6 flex-wrap">
+          <div>
+            <h1 class="text-3xl md:text-4xl font-semibold text-black">
+              Photography
+            </h1>
+            <p class="text-gray-700 mt-2 max-w-2xl">
+              A small selection of recent favorites. Click any photo for full-size.
+            </p>
+          </div>
+
+
+        <!-- Gallery -->
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <!-- Tile 1 -->
+          <a
+            href="photos/bridge.JPG"
+            target="_blank"
+            rel="noopener"
+            class="photo-tile block rounded-2xl overflow-hidden glass"
+          >
+            <img
+              src="photos/bridge.JPG"
+              alt="Photo 1"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-4">
+              <div class="text-black font-semibold">Golden Gate Bridge</div>
+              <div class="text-gray-700 text-sm mt-1">SF, CA (Aug. 2025) </div>
+            </div>
+          </a>
+
+          <!-- Tile 2 -->
+          <a
+            href="photos/cat.JPG"
+            target="_blank"
+            rel="noopener"
+            class="photo-tile block rounded-2xl overflow-hidden glass"
+          >
+            <img
+              src="photos/cat.JPG"
+              alt="Photo 2"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-4">
+              <div class="text-black font-semibold">Cat Cafe</div>
+              <div class="text-gray-700 text-sm mt-1">Flushing, NY (May 2025)</div>
+            </div>
+          </a>
+
+          <!-- Tile 3 -->
+          <a
+            href="photos/green.JPG"
+            target="_blank"
+            rel="noopener"
+            class="photo-tile block rounded-2xl overflow-hidden glass"
+          >
+            <img
+              src="photos/green.JPG"
+              alt="Photo 3"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-4">
+              <div class="text-black font-semibold">Zen Garden - Blithewold Manor </div>
+              <div class="text-gray-700 text-sm mt-1">Bristol, RI (Sep. 2024)</div>
+            </div>
+          </a>
+
+          <!-- Tile 4 -->
+          <a
+            href="photos/lion.JPG"
+            target="_blank"
+            rel="noopener"
+            class="photo-tile block rounded-2xl overflow-hidden glass"
+          >
+            <img
+              src="photos/lion.JPG"
+              alt="Photo 4"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-4">
+              <div class="text-black font-semibold">Lion of Saint Mark</div>
+              <div class="text-gray-700 text-sm mt-1">Venice, Italy (Jun. 2019)</div>
+            </div>
+          </a>
+
+          <!-- Tile 5 -->
+          <a
+            href="photos/mountain.JPG"
+            target="_blank"
+            rel="noopener"
+            class="photo-tile block rounded-2xl overflow-hidden glass"
+          >
+            <img
+              src="photos/mountain.JPG"
+              alt="Photo 5"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-4">
+              <div class="text-black font-semibold">The Pacific  </div>
+              <div class="text-gray-700 text-sm mt-1">SF, CA (Aug. 2025)</div>
+            </div>
+          </a>
+
+          <!-- Tile 6 -->
+          <a
+            href="photos/sunrise.jpg"
+            target="_blank"
+            rel="noopener"
+            class="photo-tile block rounded-2xl overflow-hidden glass"
+          >
+            <img
+              src="photos/sunrise.jpg"
+              alt="Photo 6"
+              loading="lazy"
+              decoding="async"
+              class="w-full h-64 object-cover"
+            />
+            <div class="p-4">
+              <div class="text-black font-semibold">Blue Ridge Mountains </div>
+              <div class="text-gray-700 text-sm mt-1"> Blue Ridge, GA (Jan. 2024)</div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <footer class="text-white/70 text-sm mt-6 px-1">
+        © <span id="year"></span> Indeera Saha
+      </footer>
+    </main>
+    
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
