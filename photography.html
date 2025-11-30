@@ -39,7 +39,7 @@
         will-change: transform;
       }
 
-      /* Lightweight hover without heavy filters/backdrop */
+      /* Lightweight hover */
       .photo-tile {
         transition: transform 160ms ease, box-shadow 160ms ease;
       }
@@ -64,24 +64,43 @@
 
     <!-- Dark overlay for legibility -->
     <div class="fixed inset-0 -z-10 bg-black/30"></div>
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-transparent">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-2 sm:pt-4">
-        <div class="rounded-2xl px-4 sm:px-6 py-3 bg-white/35 border border-white/20 shadow-lg backdrop-blur-md">
-          <div class="flex flex-wrap items-center justify-between gap-y-2 gap-x-4">
-            <a href="index.html" class="text-black font-semibold tracking-wide whitespace-nowrap">
+
+    <!-- STICKY NAVBAR (mobile-safe) -->
+    <nav class="sticky top-0 z-50 bg-transparent">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-4">
+        <div
+          class="rounded-2xl px-4 sm:px-6 py-3 bg-white/35 border border-white/20 shadow-lg backdrop-blur-md"
+        >
+          <div
+            class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-6"
+          >
+            <a
+              href="index.html"
+              class="text-black font-semibold tracking-wide truncate max-w-[70vw] sm:max-w-none"
+            >
               Indeera Saha
             </a>
-    
-            <div class="flex flex-wrap items-center justify-end gap-x-4 gap-y-2 text-black text-sm sm:text-base">
-              <a href="index.html" class="font-semibold underline underline-offset-4 whitespace-nowrap">
+
+            <div
+              class="flex flex-wrap items-center gap-x-4 gap-y-2 text-black text-sm sm:text-base"
+            >
+              <a
+                href="index.html"
+                class="hover:text-blue-700 hover:underline underline-offset-4 transition"
+              >
                 Home
               </a>
-              <a href="assets/Indeera-Saha_Official-Resume.pdf"
-                 class="hover:text-blue-700 hover:underline underline-offset-4 transition whitespace-nowrap">
+              <a
+                href="assets/Indeera-Saha_Official-Resume.pdf"
+                class="hover:text-blue-700 hover:underline underline-offset-4 transition"
+              >
                 Resume
               </a>
-              <a href="photography.html"
-                 class="hover:text-blue-700 hover:underline underline-offset-4 transition whitespace-nowrap">
+              <a
+                href="photography.html"
+                aria-current="page"
+                class="font-semibold underline underline-offset-4"
+              >
                 Photography
               </a>
             </div>
@@ -89,7 +108,7 @@
         </div>
       </div>
     </nav>
-    
+
     <!-- PAGE CONTENT -->
     <main class="max-w-6xl mx-auto px-6 pt-4 pb-8">
       <section class="glass-strong rounded-2xl p-6 md:p-8">
@@ -99,10 +118,11 @@
               Photography
             </h1>
             <p class="text-gray-700 mt-2 max-w-2xl">
-              A small selection of recent favorites. Click any photo for full-size.
+              A small selection of recent favorites. Click any photo for
+              full-size.
             </p>
           </div>
-
+        </div>
 
         <!-- Gallery -->
         <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -115,14 +135,14 @@
           >
             <img
               src="photos/bridge.JPG"
-              alt="Photo 1"
+              alt="Golden Gate Bridge"
               loading="lazy"
               decoding="async"
               class="w-full h-64 object-cover"
             />
             <div class="p-4">
               <div class="text-black font-semibold">Golden Gate Bridge</div>
-              <div class="text-gray-700 text-sm mt-1">SF, CA (Aug. 2025) </div>
+              <div class="text-gray-700 text-sm mt-1">SF, CA (Aug. 2025)</div>
             </div>
           </a>
 
@@ -135,7 +155,7 @@
           >
             <img
               src="photos/cat.JPG"
-              alt="Photo 2"
+              alt="Cat Cafe"
               loading="lazy"
               decoding="async"
               class="w-full h-64 object-cover"
@@ -155,14 +175,18 @@
           >
             <img
               src="photos/green.JPG"
-              alt="Photo 3"
+              alt="Zen Garden - Blithewold Manor"
               loading="lazy"
               decoding="async"
               class="w-full h-64 object-cover"
             />
             <div class="p-4">
-              <div class="text-black font-semibold">Zen Garden - Blithewold Manor </div>
-              <div class="text-gray-700 text-sm mt-1">Bristol, RI (Sep. 2024)</div>
+              <div class="text-black font-semibold">
+                Zen Garden - Blithewold Manor
+              </div>
+              <div class="text-gray-700 text-sm mt-1">
+                Bristol, RI (Sep. 2024)
+              </div>
             </div>
           </a>
 
@@ -175,7 +199,7 @@
           >
             <img
               src="photos/lion.JPG"
-              alt="Photo 4"
+              alt="Lion of Saint Mark"
               loading="lazy"
               decoding="async"
               class="w-full h-64 object-cover"
@@ -195,13 +219,13 @@
           >
             <img
               src="photos/mountain.JPG"
-              alt="Photo 5"
+              alt="The Pacific"
               loading="lazy"
               decoding="async"
               class="w-full h-64 object-cover"
             />
             <div class="p-4">
-              <div class="text-black font-semibold">The Pacific  </div>
+              <div class="text-black font-semibold">The Pacific</div>
               <div class="text-gray-700 text-sm mt-1">SF, CA (Aug. 2025)</div>
             </div>
           </a>
@@ -215,14 +239,16 @@
           >
             <img
               src="photos/sunrise.jpg"
-              alt="Photo 6"
+              alt="Blue Ridge Mountains"
               loading="lazy"
               decoding="async"
               class="w-full h-64 object-cover"
             />
             <div class="p-4">
-              <div class="text-black font-semibold">Blue Ridge Mountains </div>
-              <div class="text-gray-700 text-sm mt-1"> Blue Ridge, GA (Jan. 2024)</div>
+              <div class="text-black font-semibold">Blue Ridge Mountains</div>
+              <div class="text-gray-700 text-sm mt-1">
+                Blue Ridge, GA (Jan. 2024)
+              </div>
             </div>
           </a>
         </div>
@@ -232,7 +258,6 @@
         © <span id="year"></span> Indeera Saha
       </footer>
     </main>
-
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
